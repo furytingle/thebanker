@@ -14,3 +14,17 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+
+Route::group(['middleware' => 'api'], function () {
+    Route::resource('customer', 'CustomerController');
+
+    Route::resource('transaction', 'TransactionController');
+});
+
+Route::group(['middleware' => 'auth', 'prefix' => 'dashboard'], function () {
+    Route::get('/transactions', 'TransactionController@getTransactions')->name('transactions');
+});
