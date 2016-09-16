@@ -1,3 +1,19 @@
+## Instruction
+
+composer install
+
+run migrations: php artisan migrate
+
+run seeder: php artisan db:seed --class=UserTableSeeder
+
+After this u will be able to log in with credentials
+email: 'test@gmail.com'
+password: 'banker'
+
+run seeder: php artisan db:seed --class=CustomersTableSeeder
+
+This will fill the DB with some test data
+
 # Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
@@ -26,19 +42,3 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
 
-
-## Instruction
-
-composer install
-
-run migrations: php artisan migrate
-
-run seeder: php artisan db:seed --class=UserTableSeeder
-
-After this u will be able to log in with credentials
-email: 'test@gmail.com'
-password: 'banker'
-
-run seeder: php artisan db:seed --class=CustomersTableSeeder
-
-This will fill the DB with some test data
